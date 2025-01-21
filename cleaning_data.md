@@ -102,9 +102,7 @@ WHERE
 ```
 -- seems none are off by more than 1 day, deemed acceptable
 
-
 # Question 3 for Starting Data
-
 When trying to answer question 3 from start_with_data, found an inordinate amount of duplicates
 ```
 WITH userengagement_CTE AS (
