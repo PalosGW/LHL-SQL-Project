@@ -11,8 +11,12 @@ Risk Areas and QA Components
 	Risk Area 3: Outliers
 	Issue: finding and accounting for outliers regarding time spent on site
 
-QA Process:
-Describe your QA process and include the SQL queries used to execute it.
+# QA Process:
+
+## Risk 1
+
+---
+
 ```
 WITH product_order_CTE AS (
     SELECT
@@ -34,7 +38,11 @@ JOIN product_order_CTE USING (product_sku);
 ```
 Logic: This query uses the product_order_CTE to join with all_sessions and checks for null values in the key fields, including orderquantity.
 
+---
 
+## Risk 2
+
+---
 
 ```
 WITH product_order_CTE AS (
@@ -60,7 +68,11 @@ HAVING COUNT(*) > 1;
 ```
 Logic: This query joins product_order_CTE with all_sessions and identifies duplicate records based on the grouped dimensions.
 
+---
 
+## Risk 3
+
+---
 
 ```
 WITH userengagement_CTE AS (
@@ -114,3 +126,5 @@ WITH userengagement_CTE AS (
 )
 ```
 Logic: Removes the outliers for timeonsite
+
+---
