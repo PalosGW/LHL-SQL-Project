@@ -214,23 +214,30 @@ ORDER BY
 ---
 Answer:	Channel grouping looks to be the funnel categories for how customers land on our website. Assumptions and rankigns for
 		channelgrouping categories are as follows:
-		1. Organic Search, count 84,857
-			- Seems to people who search for our site organically without paid ad streams influenting this result
-		2. Referral, count 31,260
-			- People who have landed from our site after hearing about it from another or being referred by them
-		3. Direct, count 28,776
-			- Seems to be people with our site bookmarked or know the URL directly to jump straight to the site
-		4. Social, count 11,810
-			- People who land on our site from our social media accounts or from paid ads on social media platforms
-		5. Paid Search, count 5,203
-			- Seems to be paid adds on web browsers or paying to increase SEO efficiency to be higher in search algorithms
-		6. Affiliates, count 1,964
-			- Affiliate marketers who we have paid or made deals with to direct traffic to out site
-		7. Display, count 1,297
-			- Slightly unclear, best guess are banner and video ads on other websites
-		8. Other, count 7
-			- Visitors who land on the website which don't fall into the other 7 categories
-	
+1. **Organic Search**, count 84,857  
+   - Seems to be people who search for our site organically without paid ad streams influencing this result.
+
+2. **Referral**, count 31,260  
+   - People who have landed on our site after hearing about it from another or being referred by them.
+
+3. **Direct**, count 28,776  
+   - Seems to be people with our site bookmarked or who know the URL directly to jump straight to the site.
+
+4. **Social**, count 11,810  
+   - People who land on our site from our social media accounts or from paid ads on social media platforms.
+
+5. **Paid Search**, count 5,203  
+   - Seems to be paid ads on web browsers or paying to increase SEO efficiency to be higher in search algorithms.
+
+6. **Affiliates**, count 1,964  
+   - Affiliate marketers who we have paid or made deals with to direct traffic to our site.
+
+7. **Display**, count 1,297  
+   - Slightly unclear; the best guess is banner and video ads on other websites.
+
+8. **Other**, count 7  
+   - Visitors who land on the website but don't fall into the other 7 categories.
+ 
 	Found an inordinate amount of duplicates using the 9 columns from userengagement_CTE, total rows dropped from 4+
 	million to 165,000. Fortunately the rankings remained the same from most to least successful grouping channels
 	regardless.
