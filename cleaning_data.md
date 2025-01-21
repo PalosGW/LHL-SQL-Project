@@ -1,7 +1,7 @@
 Issues and Queries:
 Below, provide the SQL queries you used to clean your data.
 
-## Q2 Starting Questions
+# Q2 Starting Questions
 -- to answer Q2 of starting questions cleaning the all_sessions table by updating (not set)
 -- and 'not available in demo dataset' values to null
 ```
@@ -51,10 +51,11 @@ JOIN product_order_CTE USING (product_sku)
 WHERE country = 'United States'
 AND city = 'Bellflower'
 ORDER BY country, city;
-```-- Deemed irrelevant as both quantities are the same and does not affect average
+```
+-- Deemed irrelevant as both quantities are the same and does not affect average
 
 
-## For Question 3 & 4 Starting Questions
+# For Question 3 & 4 Starting Questions
 
 -- For questions 3 and 4 updating table to have null values for anything (not set) or not available
 ```
@@ -73,7 +74,7 @@ SET
            END;
 ```
 
-## Question 2 for Starting Data
+# Question 2 for Starting Data
 
 -- Cleaning for question 2 starting_with_data, after verifying visitstarttime is a timestamp. comparig it with date column
 ```
@@ -102,7 +103,7 @@ WHERE
 -- seems none are off by more than 1 day, deemed acceptable
 
 
-## Question 3 for Starting Data
+# Question 3 for Starting Data
 
 When trying to answer question 3 from start_with_data, found an inordinate amount of duplicates
 ```
