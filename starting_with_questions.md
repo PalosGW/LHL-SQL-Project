@@ -129,7 +129,8 @@ Answer:
 	
 	If we only look at countries allowing for city values to be NULL, Mali, Moldova,
 	and Montenegro carve a spot for themselves.
-	
+
+
 	Top 10 without NULL cities
 	![Description](images/avgorderquantitynonull.png)
 	
