@@ -113,16 +113,6 @@ WITH userengagement_CTE AS (
 	    FROM userengagement_CTE u
 	    CROSS JOIN userengagement_stats s
 	    WHERE timeonsite BETWEEN (s.q1 - 1.5 * (s.q3 - s.q1)) AND (s.q3 + 1.5 * (s.q3 - s.q1))
-),
-	deduplicated_CTE AS (
-	    SELECT
-	        *,
-	        ROW_NUMBER() OVER (
-	            PARTITION BY fullvisitorid, visitid, date -- Columns that define duplicates
-	            ORDER BY visitstarttime DESC -- Prioritize rows to keep (e.g., latest visitstarttime)
-	        ) AS row_num
-	    FROM
-	        userengagement_CTE
 )
 ```
 Logic: Removes the outliers for timeonsite
