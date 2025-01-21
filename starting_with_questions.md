@@ -21,7 +21,7 @@ ORDER BY totalrevenue DESC;
 ```
 
 Answer:	
-	![Countries and cities ranked by total revenue](file:///C:/LHL/LHL-SQL-Project/images/Totalrevenue.png)
+	![Countries and cities ranked by total revenue](images/Totalrevenue.png)
 	As shown the majority of the top cities are within the U.S, with Isreal's capital taking the 5th spot.
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
@@ -125,13 +125,13 @@ ORDER BY avg_order_quantity DESC;
 
 Answer: 
 	Ranking top 10 order quantity averages with NULL cities
-	![Description](file:///C:/LHL/LHL-SQL-Project/images/avgorderwithnull.png)
+	![Description](images/avgorderwithnull.png)
 	
 	If we only look at countries allowing for city values to be NULL, Mali, Moldova,
 	and Montenegro carve a spot for themselves.
 	
 	Top 10 without NULL cities
-	![Description](file:///C:/LHL/LHL-SQL-Project/images/avgorderquantitynonull.png)
+	![Description](images/avgorderquantitynonull.png)
 	
 	When looking at average order quantities by country and city the list becomes more diverse.
 	Aside from the U.S we see Chile, Ireland, Argentina, Saudi Arabia, and Czechia make the list.
