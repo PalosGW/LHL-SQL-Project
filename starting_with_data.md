@@ -1,4 +1,4 @@
-Question 1: Can you figure out what sentiment score represents and if it correlates to order quantities
+# Question 1: Can you figure out what sentiment score represents and if it correlates to order quantities
 
 SQL Queries:
 -- Using this CTE as baseline
@@ -49,16 +49,16 @@ WHERE orderquantity > 1000
 ORDER BY orderquantity
 LIMIT 10
 ```
-
+---
 Answer:	
 	Making the assumption based on the practical range the values fall within the scale is (1 to -1). Further developing this assumption
 	the sentimentscore most likely represents how satisfied a customer is with 1 representing %100 satisfaction and -1 representing 100%
 	disatisfaction. There seems to be a slight to medium correlation with orderquantities, while the top 10 for each ordering in a
 	descending manner, seem to differ slightly. There are no orders of over 1000 in quantity with a negative sentiment.
+---
 
 
-
-Question 2: What can you tell me about user engagement?
+# Question 2: What can you tell me about user engagement?
 
 
 SQL Queries:
@@ -142,15 +142,17 @@ SELECT
 	AVG(pageviews) AS avgpagesopened
 FROM userengagement_CTE
 ```
+
+---
 Answer:	
 	Assumptions, timeonsite is measured in seconds, visitstarttime is a timestamp (verified by matching with dat column). 
 	After removing the outliers the avg user spent approximately, 8.4 minutes and the maximum amount of time someone 
 	spent was 34 minutes approximately. The avgerage numbver of visits rounded is 2 and the avgerage pages opened is 15
 	rounded. 
+---
 
 
-
-Question 3: What can you tell me about channelgrouping? How do customers land on our site?
+# Question 3: What can you tell me about channelgrouping? How do customers land on our site?
 
 SQL Queries:
 -- Using question two's CTE
@@ -209,7 +211,7 @@ GROUP BY
 ORDER BY
     visit_count DESC;
 ```
-
+---
 Answer:	Channel grouping looks to be the funnel categories for how customers land on our website. Assumptions and rankigns for
 		channelgrouping categories are as follows:
 		1. Organic Search, count 84,857
@@ -232,3 +234,4 @@ Answer:	Channel grouping looks to be the funnel categories for how customers lan
 	Found an inordinate amount of duplicates using the 9 columns from userengagement_CTE, total rows dropped from 4+
 	million to 165,000. Fortunately the rankings remained the same from most to least successful grouping channels
 	regardless.
+---
