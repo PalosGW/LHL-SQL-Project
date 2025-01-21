@@ -87,7 +87,8 @@ WHERE
     EXTRACT(YEAR FROM TO_TIMESTAMP(visitstarttime)) != EXTRACT(YEAR FROM date)
     OR EXTRACT(MONTH FROM TO_TIMESTAMP(visitstarttime)) != EXTRACT(MONTH FROM date)
     OR EXTRACT(DAY FROM TO_TIMESTAMP(visitstarttime)) != EXTRACT(DAY FROM date);
-``` --Looks like 45000+ rows don't match although looks like most are only off by a day.
+```
+--Looks like 45000+ rows don't match although looks like most are only off by a day.
 
 -- Verifying to see if any are off by more than a day
 ```
@@ -102,8 +103,11 @@ WHERE
 ```
 -- seems none are off by more than 1 day, deemed acceptable
 
+
+
 # Question 3 for Starting Data
-When trying to answer question 3 from start_with_data, found an inordinate amount of duplicates
+-- When trying to answer question 3 from start_with_data, found an inordinate amount of duplicates
+
 ```
 WITH userengagement_CTE AS (
     SELECT
