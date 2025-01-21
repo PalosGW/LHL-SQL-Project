@@ -122,6 +122,7 @@ GROUP BY
 ORDER BY avg_order_quantity DESC;
 ```
 
+---
 
 Answer: 
 	Ranking top 10 order quantity averages with NULL cities
@@ -130,12 +131,15 @@ Answer:
 	If we only look at countries allowing for city values to be NULL, Mali, Moldova,
 	and Montenegro carve a spot for themselves.
 
+---
 
 	Top 10 without NULL cities
 	![Description](images/avgorderquantitynonull.png)
 	
 	When looking at average order quantities by country and city the list becomes more diverse.
 	Aside from the U.S we see Chile, Ireland, Argentina, Saudi Arabia, and Czechia make the list.
+
+---
 
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
